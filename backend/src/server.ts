@@ -6,7 +6,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["https://food-store-khwan.vercel.app/"],
+    origin: ["https://food-store-khwan-api.vercel.app"],
     methods: ["POST", "GET"]
   })
 );

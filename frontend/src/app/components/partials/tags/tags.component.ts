@@ -1,15 +1,19 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FoodService } from "src/app/services/food.service";
 import { Tag } from "src/app/shared/models/Tag";
 
 @Component({
   selector: "app-tags",
   templateUrl: "./tags.component.html",
-  styleUrl: "./tags.component.css",
+  styleUrls: ["./tags.component.css"],
 })
-export class TagsComponent {
+export class TagsComponent implements OnInit {
   tags?: Tag[];
   constructor(foodService: FoodService) {
-    this.tags = foodService.getAllTags();
+    foodService.getAllTags().subscribe((serverTags) => {
+      this.tags = serverTags;
+    });
   }
+
+  ngOnInit(): void {}
 }

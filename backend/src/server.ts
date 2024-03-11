@@ -19,6 +19,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/foods", (req, res) => {
   res.send(sample_foods);
+  res.json(sample_foods);
 });
 
 app.get("/api/foods/search/:searchTerm", (req, res) => {

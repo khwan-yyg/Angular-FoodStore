@@ -1,4 +1,4 @@
-const BASE_URL = "https://food-store-khwan.vercel.app";
+const BASE_URL = "https://food-store-khwan-api.vercel.app";
 
 export const FOODS_URL = BASE_URL + "/api/foods";
 export const FOODS_TAGS_URL = FOODS_URL + "/tags";

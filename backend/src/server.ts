@@ -6,10 +6,16 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ["https://food-store-khwan-api.vercel.app"],
-    methods: ["POST", "GET"]
+    origin: ["https://food-store-khwan.vercel.app"],
+    methods: ["POST", "GET"],
   })
 );
+
+// routes
+app.get("/", (req, res) => {
+  res.json({ mssg: "Welcome to the Food Store app" });
+  res.json("Hello FoodStore App");
+});
 
 app.get("/api/foods", (req, res) => {
   res.send(sample_foods);

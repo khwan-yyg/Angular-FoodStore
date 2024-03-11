@@ -7,6 +7,7 @@ app.use(
   cors({
     credentials: true,
     origin: ["https://food-store-khwan.vercel.app/"],
+    methods: ["POST", "GET"]
   })
 );
 
